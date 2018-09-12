@@ -2,9 +2,8 @@
 # File: guessinggame.sh
 
 function total {
-	total=$(ls | wc -l)
+	total=$(ls -1 --file-type | grep -v '/$' | wc -l)
 }
-
 total
 
 echo "How many files are in the current directory?"
